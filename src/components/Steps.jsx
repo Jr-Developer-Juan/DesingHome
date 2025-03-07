@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHouseUser, FaSearch, FaHandshake, FaKey } from "react-icons/fa"; // Usando React Icons
+import { FaSearch, FaHandshake, FaKey } from "react-icons/fa"; 
 
 const Steps = () => {
   return (

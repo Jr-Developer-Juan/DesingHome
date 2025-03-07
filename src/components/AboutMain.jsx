@@ -13,7 +13,7 @@ const AboutMain = () => {
           className="flex items-center justify-center w-full h-auto lg:w-1/2"
         >
           <video
-            src="./src/assets/video8.mp4"
+            src="/video8.mp4"
             muted
             controls
             autoPlay

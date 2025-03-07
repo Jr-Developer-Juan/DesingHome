@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import backgroundVideo from "../src/assets/hero1.mp4";
+import backgroundVideo from "/hero1.mp4";
 import Info from "./components/Info";
 import Price from "./components/Price";
 import { Divider } from "@nextui-org/react";
