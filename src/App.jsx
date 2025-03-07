@@ -24,6 +24,7 @@ function App() {
             loop
             muted
             playsInline
+            lazy="loading"
           />
 
           {/* Capa oscura para mejorar la visibilidad del contenido */}
@@ -31,11 +32,9 @@ function App() {
           <div className="relative w-full max-w-full flex flex-col justify-between text-white z-100 lg:mt-[-150px] sm:mt-24">
             <Navbar />
             <div className="flex-wrap items-center hidden sm:flex">
-              {/* Info solo en pantallas grandes */}
               <Info />
             </div>
 
-            {/* Título solo en pantallas pequeñas */}
             <div className="flex flex-wrap items-center sm:hidden">
               <motion.h1
                 variants={fadeIn("left", 0.5)}
