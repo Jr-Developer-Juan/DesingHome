@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import backgroundVideo from "/hero1.mp4";
+import backgroundVideo from "/video4.mp4";
 import Info from "./components/Info";
 import Price from "./components/Price";
 import { Divider } from "@nextui-org/react";
@@ -11,31 +11,34 @@ import Steps from "./components/Steps";
 import Footer from "./components/Footer";
 import { motion } from "framer-motion";
 import { fadeIn } from "./variants";
+import { Button } from "@nextui-org/react";
+import { PiArrowRightThin } from "react-icons/pi";
 
 function App() {
   return (
     <>
-      <div className="w-full">
+      <div className="w-full overflow-x-hidden">
         <div className="relative flex items-center w-full min-h-screen bg-black">
           <video
             className="absolute top-0 left-0 object-cover w-full h-full"
             src={backgroundVideo}
-            autoPlay
             loop
             muted
             playsInline
+            autoPlay
             loading="lazy"
+            poster="/house2.jpeg"
           />
 
           {/* Capa oscura para mejorar la visibilidad del contenido */}
           <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
           <div className="relative w-full max-w-full flex flex-col justify-between text-white z-100 lg:mt-[-150px] sm:mt-24">
             <Navbar />
-            <div className="flex-wrap items-center hidden sm:flex">
+            <div className="flex-wrap items-center hidden mt-24 sm:flex">
               <Info />
             </div>
 
-            <div className="flex flex-wrap items-center sm:hidden">
+            <div className="flex flex-wrap items-center justify-center gap-10 sm:hidden">
               <motion.h1
                 variants={fadeIn("left", 0.5)}
                 initial="hidden"
@@ -44,8 +47,21 @@ function App() {
                 className="text-5xl text-center sm:text-start"
               >
                 Finding Your New <br />
-                Home Is <span className="text-white">Simple</span>
+                Home Is{" "}
+                <span className="font-bold text-white ">Simple</span>
               </motion.h1>
+              <div className="flex flex-col justify-center">
+              <motion.div
+                variants={fadeIn("up", 0.5)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.5 }}
+              >
+                <Button className="lg:ml-[-320px] bg-white/30 flex justify-between h-12 px-4 py-2 mx-auto mt-8 text-lg text-white transition-colors duration-300 shadow-lg w-52 rounded-2xl backdrop-filter backdrop-blur-md hover:bg-opacity-50 sm:mx-0">
+                  Search <PiArrowRightThin className="text-4xl" />
+                </Button>
+              </motion.div>
+              </div>
             </div>
           </div>
         </div>
@@ -56,7 +72,7 @@ function App() {
           <div className="w-full h-10 flex justify-center items-center mt-[-30px]">
             <Divider className="w-72" />
           </div>
-          <div className="flex flex-col w-full h-40 mt-64 sm:mt-0">
+          <div className="flex flex-col w-full h-40 mt-20 sm:mt-0">
             <MainHouse />
           </div>
           <div className="flex flex-wrap justify-center gap-5 mt-24">

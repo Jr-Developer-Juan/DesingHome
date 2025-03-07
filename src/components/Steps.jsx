@@ -3,7 +3,7 @@ import { FaSearch, FaHandshake, FaKey } from "react-icons/fa";
 
 const Steps = () => {
   return (
-    <div className="flex flex-col justify-center gap-8 p-12 lg:flex-row">
+    <div className="flex flex-col items-center justify-center gap-8 lg:flex-row">
    
       <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-xl w-72">
         <FaSearch className="mb-4 text-4xl text-primary" />

@@ -4,7 +4,7 @@ import { MdOutlineBathtub } from "react-icons/md";
 import { Divider, Button } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants.js";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const MainCards = ({
   imgSrc,
@@ -42,6 +42,13 @@ const MainCards = ({
       setIsPlaying(false);
     }
   };
+  
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.setAttribute("playsinline", "true");
+      videoRef.current.setAttribute("webkit-playsinline", "true"); // Para compatibilidad con iOS más antiguos
+    }
+  }, []);
 
   return (
     <div className="">
@@ -65,6 +72,7 @@ const MainCards = ({
             />
           )}
           <video
+            playsinline
             ref={videoRef}
             className="object-cover w-full h-full rounded-t-2xl"
             src={videoSrc}
@@ -74,6 +82,7 @@ const MainCards = ({
             onEnded={() => setIsPlaying(false)}
             style={{ display: isPlaying ? "block" : "none" }}
             loading="lazy"
+            onClick={(e) => e.preventDefault()}
           ></video>
         </div>
         <div>
