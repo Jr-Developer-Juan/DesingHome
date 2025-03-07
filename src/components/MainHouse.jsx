@@ -4,7 +4,7 @@ const MainHouse = () => {
   return (
     <>
       <motion.div
-       variants={fadeIn('up', 0.6)}
+       variants={fadeIn('right', 0.6)}
        initial="hidden"
        whileInView={'show'}
        viewport={{ once: false, amount: 0.7 }}

@@ -7,7 +7,7 @@ const Price = () => {
   return (
     <div className="w-3/5 h-[110px] bg-background border shadow-xl rounded-full flex justify-evenly items-center font-sans p-5">
       <motion.div
-        variants={fadeIn('up', 0.6)}
+        variants={fadeIn('left', 0.6)}
         initial="hidden"
         whileInView={'show'}
         viewport={{ once: false, amount: 0.7 }}
@@ -21,7 +21,7 @@ const Price = () => {
         </span>
       </motion.div>
       <motion.div 
-       variants={fadeIn('up', 0.6)}
+       variants={fadeIn('right', 0.6)}
        initial="hidden"
        whileInView={'show'}
        viewport={{ once: false, amount: 0.7 }}
@@ -35,7 +35,7 @@ const Price = () => {
         </span>
       </motion.div>
       <motion.div 
-       variants={fadeIn('up', 0.6)}
+       variants={fadeIn('left', 0.6)}
        initial="hidden"
        whileInView={'show'}
        viewport={{ once: false, amount: 0.7 }}

@@ -16,6 +16,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        anton: ['Anton', 'sans-serif'],
       },
       screens: {
         'sm': '640px', // Small devices (tablets)
