@@ -24,7 +24,7 @@ function App() {
             loop
             muted
             playsInline
-            lazy="loading"
+            loading="lazy"
           />
 
           {/* Capa oscura para mejorar la visibilidad del contenido */}
